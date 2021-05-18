@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	//code
+	ios_base :: sync_with_stdio(false);
+	cin.tie(NULL);
+	long long T;
+	double a,b,c;
+	cin>>T;
+	while (T--){
+	    cin>>a>>b>>c;
+	    double x =(double)(a+b+c)/2;
+        bool reverse = false;	   
+	    cout<<setprecision(6);
+	    cout<<std::fixed;
+	    if (a<b){
+	        swap(a,b);
+	        reverse = true;
+	    }
+	    
+	    a = max(a,x);
+	    b = (x*2)-a;
+	    
+	    if(reverse){
+	        swap(a,b);
+	    }
+	    cout<<a<<" "<<b<<"\n";
+	}
+	
+	return 0;
+}
